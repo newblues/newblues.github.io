@@ -1,0 +1,49 @@
+.menu{
+	display: flex;
+	justify-content: center;
+    margin-top: 108px;
+}
+
+
+.menu_item{
+	position: relative;
+	margin: 0px 15px 0px 0px;
+	padding: 9px 0px 9px 0px ;
+    
+
+}
+
+.menu_item:hover{
+    text-decoration:none;
+    color: black;
+    
+}
+
+
+.menu_item:before, .menu_item:after{
+    position: absolute;
+    content: "";
+    left: 0px;
+    width: 100%;
+    height: 2px;
+
+    background: black;
+    
+    opacity: 0;
+    transition: all ease 400ms;
+}
+
+.menu_item:before{
+    top: 0px;
+    transform: translateY(10px);
+}
+
+.menu_item:after{
+    bottom: 0px;
+    transform: translateY(-10px);
+}
+
+.menu_item:hover:after, .menu_item:hover:before{
+    opacity: 1;
+    transform: translateY(0px);
+}
